@@ -55,7 +55,7 @@ arraySortNumber.sort((a, b) => {
 const highestAsc = arraySortNumber[arraySortNumber.length - 1];
 const lowerstAsc = arraySortNumber[0];
 console.log(arraySortNumber, highestAsc, lowerstAsc);
-/*
+/*Problem-03
 Write a JavaScript function that accepts a string as a parameter and counts the
 number of vowels within the string.
 Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do
@@ -64,6 +64,7 @@ Sample Data and output:
 Example string : 'The quick brown fox'
 Expected Output : 5
  */
+//Solution-03
 let vowelStr = "The quick brown fox";
 const vowels = ["a", "e", "i", "o", "u"];
 function countVowels(str) {
@@ -77,3 +78,30 @@ function countVowels(str) {
 }
 console.log(countVowels(vowelStr));
 console.log(countVowels("Nabil"));
+/*Problem-04
+Write a JavaScript function that accepts a string as a parameter and converts the
+first letter of each word of the string in upper case.
+Example string : 'the quick brown fox'
+Expected Output : 'The Quick Brown Fox '
+
+ */
+//Solution-04;
+let upperStr = "the quick brown fox";
+function upperCase(str) {
+  const arr = str.split(" ");
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+  }
+  return newArr.join(" ");
+}
+console.log(upperCase(upperStr));
+//Without FUnction
+const str = "i have learned something new today";
+const arr1 = str.split(" ");
+const newStr = [];
+for (let i = 0; i < arr1.length; i++) {
+  newStr.push(arr1[i].charAt(0).toUpperCase() + arr1[i].slice(1));
+}
+const res1 = newStr.join(" ");
+console.log(res1);
